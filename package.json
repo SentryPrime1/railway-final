@@ -1,0 +1,40 @@
+{
+  "name": "sentryprime-accessibility-scanner",
+  "version": "1.0.0",
+  "description": "Enterprise-grade accessibility scanning SaaS with real Puppeteer + axe-core technology",
+  "main": "app.py",
+  "scripts": {
+    "start": "python3 app.py",
+    "dev": "NODE_ENV=development python3 app.py",
+    "test": "node scanner.js https://example.com",
+    "install-deps": "npm install && pip3 install -r requirements.txt"
+  },
+  "keywords": [
+    "accessibility",
+    "a11y",
+    "wcag",
+    "puppeteer",
+    "axe-core",
+    "scanning",
+    "enterprise",
+    "saas"
+  ],
+  "author": "SentryPrime Team",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^21.11.0",
+    "axe-core": "^4.10.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SentryPrime1/railway-final.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SentryPrime1/railway-final/issues"
+  },
+  "homepage": "https://sentryprime.railway.app"
+}
