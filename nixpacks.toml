@@ -1,0 +1,18 @@
+[phases.setup]
+nixPkgs = ['nodejs-18_x', 'python311', 'chromium', 'curl', 'git']
+
+[phases.install]
+cmds = [
+    'npm install',
+    'pip install -r requirements.txt'
+]
+
+[phases.build]
+cmds = ['echo "SentryPrime build complete - Ready for Railway deployment"']
+
+[start]
+cmd = 'gunicorn --bind 0.0.0.0:$PORT --workers 2 --timeout 120 app:app'
+
+[variables]
+PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = 'true'
+PUPPETEER_EXECUTABLE_PATH = '/nix/store/*/bin/chromium'
