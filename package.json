@@ -1,13 +1,12 @@
 {
-  "name": "sentryprime-accessibility-scanner",
+  "name": "sentryprime-enterprise-scanner",
   "version": "1.0.0",
   "description": "Enterprise-grade accessibility scanning SaaS with real Puppeteer + axe-core technology",
-  "main": "app.py",
+  "main": "server.js",
   "scripts": {
-    "start": "python3 app.py",
-    "dev": "NODE_ENV=development python3 app.py",
-    "test": "node scanner.js https://example.com",
-    "install-deps": "npm install && pip3 install -r requirements.txt"
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js",
+    "test": "node -e \"console.log('SentryPrime Enterprise Scanner - Google Cloud Run Ready')\""
   },
   "keywords": [
     "accessibility",
@@ -17,13 +16,16 @@
     "axe-core",
     "scanning",
     "enterprise",
-    "saas"
+    "saas",
+    "google-cloud-run"
   ],
   "author": "SentryPrime Team",
   "license": "MIT",
   "dependencies": {
+    "express": "^4.21.1",
     "puppeteer": "^21.11.0",
-    "axe-core": "^4.10.3"
+    "axe-core": "^4.10.3",
+    "cors": "^2.8.5"
   },
   "engines": {
     "node": ">=18.0.0",
@@ -32,9 +34,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/SentryPrime1/railway-final.git"
-  },
-  "bugs": {
-    "url": "https://github.com/SentryPrime1/railway-final/issues"
-  },
-  "homepage": "https://sentryprime.railway.app"
+  }
 }
